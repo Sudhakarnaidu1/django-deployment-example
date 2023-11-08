@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'temp/base.html' %}
+{% load static %}
+{% load ext_filters %}
+
+<div class="container">
+    {% block body_block %}
+        <h1>Hi im home page</h1>
+        <img src="{% static 'images/home.jpeg' %}" alt="something went wrong"><br>
+        {{ multi|multiply:20 }}<br>
+        {{ favno|multiply:10 }} <br>
+        {{ selfinto|repla:'hey' }} <br>
+        {{ div|floordiv:10 }}
+    {% endblock %}
+
+</div>
